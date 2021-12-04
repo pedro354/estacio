@@ -1,0 +1,48 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch index",
+            "request": "launch",
+            "mainClass": "segundaaula.index",
+            "projectName": "estacio_81b956e7"
+        },
+        {
+            "type": "java",
+            "name": "Launch primo",
+            "request": "launch",
+            "mainClass": "primo.primo",
+            "projectName": "estacio_81b956e7"
+        },
+        {
+            "type": "java",
+            "name": "Launch exemplo",
+            "request": "launch",
+            "mainClass": "segundaaula.exemplo",
+            "projectName": "estacio_81b956e7"
+        },
+        {
+            "type": "java",
+            "name": "Launch massacorporal",
+            "request": "launch",
+            "mainClass": "massacorporal.massacorporal",
+            "projectName": "estacio_81b956e7"
+        },
+        {
+            "name": "cl.exe - Criar e depurar o arquivo ativo",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal",
+            "preLaunchTask": "C/C++: cl.exe arquivo de build ativo"
+        }
+    ]
+}
