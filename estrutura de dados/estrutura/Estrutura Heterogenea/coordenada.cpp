@@ -4,44 +4,41 @@
 #include <string>
 using namespace std;
 
-struct Coordenada ponto [3];
- {
+struct Coordenada {
     int x, y, z;
 };
+void imprimirDados(Coodernada pto);
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
 
     Coordenada pontoA;
-    ponto[0].x = 10;
-    ponto[0].y = 20;
-    ponto[0].z = 50;
-   
+    Coordenada pontoB;
 
-    cout << "Ponto A: "<< ponto[0].x <<;
-    cout << "Ponto A: "<< ponto[0].y <<;
-    cout << "Ponto A: "<< ponto[0].z << endl;
-    
-        Coordenada pontoB;
-    ponto[1].x = 33;
-    ponto[1].y = 44;
-    ponto[1].z = 66;
-   
+    pontoA.x = 10;
+    pontoA.y = 20;
+    pontoA.z = 30;
 
-    cout << "Ponto B: "<< ponto[1].x <<;
-    cout << "Ponto B: "<< ponto[1].y <<;
-    cout << "Ponto B: "<< ponto[1].z << endl;
-        
-        Coordenada pontoC;
-    ponto[2].x = 4;
-    ponto[2].y = 7;
-    ponto[2].z = 9;
-   
 
-    cout << "Ponto C: "<< ponto[2].x <<;
-    cout << "Ponto C: "<< ponto[2].y <<;
-    cout << "Ponto C: "<< ponto[2].z << endl;
+cout << "Digite a coordenada x: ";
+cin >> pontoB.x;
 
+cout << "Digite a coordenada y: ";
+cin >> pontoB.y;
+
+cout << "Digite a coordenada z: ";
+cin >> pontoB.z;
+
+imprimirDados(pontoA);
+imprimirDados(pontoB);
     system("pause");
     return 0;
+}
+
+void imprimirDados(Coodernada ponto){
+cout << "Ponto B - x: " << ponto.x << endl << endl;
+cout << "Ponto B - y: " << ponto.y << endl << endl;
+cout << "Ponto B - z: " << ponto.z << endl << endl;
+
+
 }
