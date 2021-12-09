@@ -7,7 +7,7 @@ using namespace std;
 struct Coordenada {
     int x, y, z;
 };
-void imprimirDados(Coodernada pto);
+void imprimirDados(Coordenada pto);
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
@@ -35,7 +35,7 @@ imprimirDados(pontoB);
     return 0;
 }
 
-void imprimirDados(Coodernada ponto){
+void imprimirDados(Coordenada ponto){
 cout << "Ponto B - x: " << ponto.x << endl << endl;
 cout << "Ponto B - y: " << ponto.y << endl << endl;
 cout << "Ponto B - z: " << ponto.z << endl << endl;
