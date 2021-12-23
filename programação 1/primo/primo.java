@@ -9,12 +9,14 @@ public class primo {
         for (i=1; i<= nr; i++){
             if (nr % i == 0) {
                 cont++;
-            }
+            }sc.close();
         }
     if (cont == 2){
         System.out.println("O numero é PRIMO");
     } else {
         System.out.println("O numero não é PRIMO");
     }
+    
 }
+
 }
