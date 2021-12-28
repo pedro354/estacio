@@ -17,5 +17,6 @@ public class AppAluno {
         aluno1.imprimir();
         aluno2.imprimir();
         aluno3.imprimir();
-    }
-}
+
+    }}
+

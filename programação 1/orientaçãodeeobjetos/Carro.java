@@ -1,5 +1,5 @@
 package orientaçãodeeobjetos;
-
+import java.util.Scanner;
 public class Carro {
     String fabricante, modelo, cor, placa;
     double valor;
@@ -70,7 +70,7 @@ public class Carro {
         return anoFabricacao;
     }
 
-    public void setanoFabricacao(int anof) {
+    public void setAnoFabricacao(int anof) {
         if (anof > 0) {
             anoFabricacao = anof;
         }
@@ -94,6 +94,23 @@ public class Carro {
         System.out.println("Numero de Portas: " + getNumerosPortas());
         System.out.println("Ano de Fabricação: " + getAnoFabricacao());
         System.out.println("Ano do Modelo: " + getAnoModelo());
-
+    }
+    public void entradaDados(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o Fabricante do carro: ");
+        setFabricante (entrada.nextLine());
+        System.out.println("Digite o Modelo do carro: ");
+        setModelo (entrada.nextLine());
+        System.out.println("Digite o Cor do carro: ");
+        setCor (entrada.nextLine());
+        System.out.println("Digite o Placa do carro: ");
+        setPlaca (entrada.nextLine());
+        System.out.println("Digite o Valor do carro: ");
+        setValor (Double.parseDouble(entrada.nextLine()));
+        System.out.println("Digite o Numero de Portas do carro: ");
+        setNumeroPortas (Integer.parseInt(entrada.nextLine()));
+        System.out.println("Digite o Ano de Fabricação do carro: ");
+        setAnoFabricacao (Integer.parseInt(entrada.nextLine()));
+        entrada.close();
     }
 }

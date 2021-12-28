@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch AppCelular",
+      "request": "launch",
+      "mainClass": "orientaçãodeeobjetos.AppCelular",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
       "name": "Launch AppCarro",
       "request": "launch",
       "mainClass": "orientaçãodeeobjetos.AppCarro",
