@@ -3,6 +3,54 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch AppAluno",
+      "request": "launch",
+      "mainClass": "AppAluno",
+      "projectName": "sdadasdas"
+    },
+    {
+      "type": "java",
+      "name": "Launch AppGeometria",
+      "request": "launch",
+      "mainClass": "metodoconst.AppGeometria",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
+      "name": "Launch AppLogin",
+      "request": "launch",
+      "mainClass": "metodoconst.AppLogin",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
+      "name": "Launch AppCarroNovo",
+      "request": "launch",
+      "mainClass": "metodoconst.AppCarroNovo",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
+      "name": "Launch AppCarro",
+      "request": "launch",
+      "mainClass": "metodoconst.AppCarro",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Java Program",
+      "request": "launch",
+      "mainClass": ""
+    },
+    {
+      "type": "java",
+      "name": "Launch AppPessoa",
+      "request": "launch",
+      "mainClass": "metodoconst.AppPessoa",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
       "name": "Launch AppCelular",
       "request": "launch",
       "mainClass": "orientaçãodeeobjetos.AppCelular",
