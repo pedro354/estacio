@@ -106,8 +106,8 @@ public class Celular {
             
             System.out.println("Digite o Tamanho da Tela do Celular: ");
             setTamanhoTela (Double.parseDouble(entrada.nextLine()));
-    
-        }
+            entrada.close();
+        } 
 
     public void imprimir() {
         System.out.println("Marca: " + getMarca());

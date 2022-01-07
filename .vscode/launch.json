@@ -132,9 +132,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "c:/Users/usuario/Desktop/Antivirus/estacio/estrutura de dados/estrutura/Estrutura Heterogenea",
+      "cwd": "c:/Users/usuario/Desktop/Antivirus/estacio/estrutura de dados",
       "environment": [],
-      "program": "c:/Users/usuario/Desktop/Antivirus/estacio/estrutura de dados/estrutura/Estrutura Heterogenea/build/Debug/outDebug",
+      "program": "c:/Users/usuario/Desktop/Antivirus/estacio/estrutura de dados/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/Users/usuario/Documents/MinGW/bin/gdb.exe",
