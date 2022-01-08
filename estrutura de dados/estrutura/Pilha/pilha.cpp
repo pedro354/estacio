@@ -16,7 +16,7 @@ int main()
 {
     setlocale(LC_ALL, "Portuguese");
 
-    int op, val, topo, = -1, pilha[TAM], resp;
+    int op, val, topo = -1, pilha[TAM], resp;
 
     do
     {
@@ -77,7 +77,7 @@ int main()
     } while (op != 5);
 }
 
-void empilha(int p[], int& t, int t){
+void empilha(int p[], int& t, int v){
     if (t == TAM - 1){
     cout << "\nAtenção. \nPilha Cheia\n";
     }else {
@@ -105,3 +105,15 @@ void acessoTopo(int p[], int& t){
     }
 }
 
+void situacaoPilha(int p[], int& t){
+    if(t == -1){
+        cout << "\nAtenção \nPilha Vazia.\n";
+    }
+    else if (t == TAM -1){
+        cout << "\nAtenção \nPilha Cheia\n";
+    }
+    else{
+        cout << "\nTotal de elementos na pilha: " << t + 1 << "\n";
+        cout << "\n\nEspaco disponivel na pilha: " << TAM + (t + 1) << "\n";
+    }
+}
