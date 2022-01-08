@@ -2,118 +2,106 @@
 #include <locale.h>
 #include <stdlib.h>
 #include <string>
+#include <windows.h>
 
-#define TAM 5
+
+#define TAM 100
 
 using namespace std;
 
-void empilha(int p[], int &t, int v);
-int desempilha(int p[], int &t, int &v);
-void acessoTopo(int p[], int &t);
-void situacaoPilha(int p[], int &t);
+void push(float p[], int t, float v);
+float pop(float p[], int t);
 
 int main()
 {
-    setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "PORTUGUESE");
 
-    int op, val, topo = -1, pilha[TAM], resp;
+    int t = -1; // inicialização
+    float a, b, p[TAM];
+    char s[10];
 
+    system("");
+    cout << "\n*****************************************************";
+    cout << "\n* Calculadora para quatro operações pós-fixa *";
+    cout << "\n* Digite numeros e operadores *";
+    cout << "\n* Digite s para sair *";
+    cout << "\n*****************************************************\n";
     do
     {
-        system("cls");
-        system("color f0");
+        cout << ": ";
+        cin >> s;
 
-        cout << "\nPlha (lifo - last in - fist out)\n\n";
-        cout << "\n1- Inserir um valor na pilha";
-        cout << "\n2- Remover um valor na pilha";
-        cout << "\n3- Mostrar o elemento no topo da pilha";
-        cout << "\n4- Mostrar situaÃ§Ã£o da pilha";
-        cout << "\n5- Sair";
-
-        cout << "\n\nOpÃ§Ã£o: ";
-        cin >> op;
-
-        system("cls");
-
-        switch (op)
+        switch (s[0])
         {
-        case 1:
-            cout << "Digite o valor a ser empilhado: ";
-            cin >> val;
-            empilha(pilha, topo, val);
+        case '+':
+            a = pop(p, t);
+            b = pop(p, t);
+            cout << "\n" << a + b << "\n";
+            push(p, t, a + b);
             break;
 
-        case 2:
-            resp = desempilha(pilha, topo, val);
-            if (resp == 0)
+        case '-':
+            a = pop(p, t);
+            b = pop(p, t);
+            cout << "\n" << a - b << "\n";
+            push(p, t, a - b);
+            break;
+
+        case '*':
+            a = pop(p, t);
+            b = pop(p, t);
+            cout << "\n" << a * b << "\n";
+            push(p, t, a * b);
+            break;
+
+        case '/':
+            a = pop(p, t);
+            b = pop(p, t);
+            if (a == 0)
             {
-                cout << "\nAnteÃ§Ã£o! \nPilha Vazia\n";
+                cout << "\nOperação inválida: divisão por 0.\n";
             }
             else
             {
-                cout << "\nValor removido: " << val;
+                cout << "\n" << a / b << "\n";
+                push(p, t, a / b);
             }
             break;
 
-        case 3:
-            acessoTopo(pilha, topo);
-            break;
-
-        case 4:
-            situacaoPilha(pilha, topo);
-            break;
-
-        case 5:
-            cout << "\nPrograma bÃ¡sico da pilha.\n";
-            break;
-
-            default:
-            cout << "\nOpÃ§Ã£o InvÃ¡lida\n";
+        default:
+            push(p, t, atof(s));
         }
-
-        cout <<"\n\n";
-        system("pause");
-
-    } while (op != 5);
+    } while (s[0] != 's');
+    system("pause");
 }
 
-void empilha(int p[], int& t, int v){
-    if (t == TAM - 1){
-    cout << "\nAtenÃ§Ã£o. \nPilha Cheia\n";
-    }else {
-        t++;
-        p[t] = v;
+/*insere elemento na planilha */
+void push(float p[], int t, float v)
+{
+    if (t == TAM - 1)
+    {
+        cout << "\nAtenção Pilha Cheia\n";
+    }
+    else
+    {
+        t++;      // atualiza o topo
+        p[t] = v; // pilha recebe o valor
     }
 }
 
-int desempilha (int p[], int& t, int& v){
-    if ( t == -1){
+/* Remove elemento da pilha*/
+float pop(float p[], int t)
+{
+    float v;
+    if (t == -1)
+    {
+        cout << "\nAtenção Pilha Vazia";
         return 0;
     }
-    else{
-        v = p[t];
-        t--;
-        return 1;
-    }
-}
-
-void acessoTopo(int p[], int& t){
-    if (t == -1){
-        cout << "\nAtenÃ§Ã£o! \nPilha Vazia\n";
-    }else {
-        cout << "\nElemento do topo da pilha: " << p[t];
-    }
-}
-
-void situacaoPilha(int p[], int& t){
-    if(t == -1){
-        cout << "\nAtenÃ§Ã£o \nPilha Vazia.\n";
-    }
-    else if (t == TAM -1){
-        cout << "\nAtenÃ§Ã£o \nPilha Cheia\n";
-    }
-    else{
-        cout << "\nTotal de elementos na pilha: " << t + 1 << "\n";
-        cout << "\n\nEspaco disponivel na pilha: " << TAM + (t + 1) << "\n";
+    else
+    {
+        v = p[t]; // guarda o valor do topo
+        t--;      // atualiza o topo
+        return v;
     }
 }
