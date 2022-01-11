@@ -1,3 +1,6 @@
-function displaynum(n1) {
-    Calculadora.text1.value = Calculadora.text1.value + n1;
-}
+let valor1 = num;
+let oper = oper;
+let valor2 = num;
+
+oper = num + oper + num;
+
