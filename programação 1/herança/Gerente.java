@@ -29,9 +29,9 @@ public class Gerente extends PessoaEmpresa {
         super(id, sa);
     }
     public Gerente(double sa, String id){ 
-        super(id, sa)
+        super(id, sa);
     }
-    public Gerente(String id, String no, String ma, double sa, double pv int ng){
+    public Gerente(String id, String no, String ma, double sa, double pv, int ng){
         super (id, no, ma, sa);
         setPercentualVenda(pv);
         setNivelGerente(ng);

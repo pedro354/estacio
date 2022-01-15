@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Pessoa {
-    String getIdentidade = new String(){
+    String identidade, nome;
+    String getIdentidade(){
         return identidade;
     }
     public void setIdentidade(String id){
@@ -20,7 +21,7 @@ public class Pessoa {
     public Pessoa(String id){
         setIdentidade(id);
     }
-    public Pessoa (string id, string no){
+    public Pessoa (String id, String no){
         setIdentidade(id);
         setNome(no);
     }
