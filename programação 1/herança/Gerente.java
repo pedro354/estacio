@@ -5,16 +5,16 @@ public class Gerente extends PessoaEmpresa {
     public double getPercentualVenda(){
         return percentualVenda;
     }    
-    public void percentualVenda(double pv){
+    public void setPercentualVenda(double pv){
         if(pv >= 0){
             percentualVenda = pv;
         }
     }
-    public void getNivelGerente(){
+    public int getNivelGerente(){
         return nivelGerente;
     }
-    public void nivelGerente(int ng){
-        if (nv = 0){
+    public void setNivelGerente(int ng){
+        if (ng >= 0){
             nivelGerente = ng;
         }
     }

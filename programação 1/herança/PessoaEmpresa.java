@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class PessoaEmpresa extends Pessoa {
     String matricula;
-    Double salario;
+    double salario;
     public String getMatricula(){
         return matricula;
     }
@@ -30,8 +30,8 @@ public class PessoaEmpresa extends Pessoa {
         super(id);
         setSalario(sa);
     }
-    public PessoaEmpresa (String id, Double no, String ma, double sa){
-        super(id,no);
+    public PessoaEmpresa (String id, String no, String ma, double sa){
+        super(id, no);
         setMatricula(ma);
         setSalario(sa);
     }
