@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Pessoa",
+      "request": "launch",
+      "mainClass": "Pessoa",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
       "name": "Launch AppAluno",
       "request": "launch",
       "mainClass": "AppAluno",

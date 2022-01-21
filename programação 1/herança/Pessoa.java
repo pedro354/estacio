@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Pessoa {
     String identidade, nome;
     String getIdentidade(){
