@@ -1,48 +1,25 @@
 package Desktop;
 
-public class Memoria {
-    public String marca, modelo, tipo;
-    public double preco;
-    public int capacidade;
-    public String getMarca(){
-        return marca;
+public class Memoria extends Armazenamento {
+    public Memoria(){
+        super();
     }
-    public void setMarca(String ma){
-        if(ma.isEmpty()){
-            marca = ma;
-        }
+    public Memoria (String ti, int ca){
+        setTipo(ti);
+        setCapacidade(ca);
     }
-    public String getModelo(){
-        return modelo;
+    public Memoria(String ma, String mo){
+        super(ma, mo);
     }
-    public void setModelo(String mo){
-        if(mo.isEmpty()){
-            modelo = mo;
-        }
+    public Memoria (String ma,double pr){
+        super(ma, pr);
     }
-    public String getTipo(){
-        return tipo;
+    public Memoria (String ma, String mo, double pr){
+        super(ma,mo,pr);
     }
-    public void setTipo(String ti){
-        if(ti.isEmpty()){
-            tipo = ti;
-        }
+    public Memoria (String ma, String mo, double pr, String ti, int ca){
+        super(ma, mo, pr);
+        setTipo(ti);
+        setCapacidade(ca);
     }
-    public double getPreco(){
-        return preco;
-    }
-    public void setPreco(double pre){
-        if(pre>= 0){
-            preco = pre;
-        }
-    }
-    public int getCapacidade(){
-        return capacidade;
-    }
-    public void setCapacidade(int cap){
-        if(cap>= 0){
-            capacidade = cap;
-        }
-    }
-} 
-
+}
