@@ -1,5 +1,4 @@
 package biblioteca;
-import biblioteca.Forno;
 public class AppForno {
     public static void main (String[] args) {
         Forno f = new Forno("GE", "f505", 60, 120);
