@@ -10,7 +10,7 @@ Analista -> 7mil
 Gerente-> 10mil
 */
 
-let cargo;
+let cargo = "Arquiteto";
 
 switch (cargo) {
 
@@ -43,7 +43,7 @@ switch (cargo) {
     break;
 
     default:
-        console.log("")
+        console.log("Cargo não cadastrado no sistema");
 
 
 }
