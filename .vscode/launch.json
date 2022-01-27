@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch AppForno",
+      "request": "launch",
+      "mainClass": "biblioteca.AppForno",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
       "name": "Launch Encapsulamento2",
       "request": "launch",
       "mainClass": "Encapsulamento2",
