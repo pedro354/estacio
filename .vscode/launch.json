@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Encapsulamento2",
+      "request": "launch",
+      "mainClass": "Encapsulamento2",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
+      "name": "Launch AppEncapsulamento1",
+      "request": "launch",
+      "mainClass": "AppEncapsulamento1",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
+      "name": "Launch AppAgregacao",
+      "request": "launch",
+      "mainClass": "Desktop.AppAgregacao",
+      "projectName": "estacio_81b956e7"
+    },
+    {
+      "type": "java",
       "name": "Launch Pessoa$main",
       "request": "launch",
       "mainClass": "Pessoa$main",
