@@ -1,13 +1,16 @@
+///* for (atribuição; condição; atualização) */
+
 //contagem até 50
 for(let contador = 0; contador < 10; contador++){
     console.log(contador);
-}/*
+}
+/*
 /*regressiva 10 a 1
 for (let cont = 10; cont > 0; cont--){
     console.log(cont);
 }
 console.log("feliz ano novo");
-*//*
+*/
 let nome = "Thaina";
 let sobrenome = "Silva";
 let idade = 23;
@@ -34,4 +37,4 @@ for(let cont = 0; cont < 3; cont++){
     juros = valorEmprestimo * taxaJuros * numAnos;
     montante =  valorEmprestimo + juros;
     console.log(montante);
-}*/
+}
