@@ -14,14 +14,6 @@ let juros = valorEmprestimo * taxaJuros * numAnos;
 let montante =  valorEmprestimo + juros;
 
 //If e Else//
-
-/*if(bomPagador){
-    console.log("o cliente: "+ nome +" é uma boa pagadora")
-}else{
-    console.log("o cliente: "+ nome +" não é uma boa pagadora")
-}*/
-
-console.log("O cliente: " + nome + " " + (bomPagador ? "é bom pagador" : "não é bom pagador"));
 //taxa de juros por idade ELSE IF
 /*
 18-25 anos -> 9%
@@ -39,5 +31,13 @@ if (idade >= 18 && idade <= 25){
 }else {
     taxaJuros = 0.06
 }
+
+/*if(bomPagador){
+    console.log("o cliente: "+ nome +" é uma boa pagadora")
+}else{
+    console.log("o cliente: "+ nome +" não é uma boa pagadora")
+}*/
+//uso do if ternario nome da variavel ? condição(true) : condição(false);
+console.log("O cliente: " + nome + " " + (bomPagador ? "é bom pagador" : "não é bom pagador"));
 console.log(taxaJuros);
 

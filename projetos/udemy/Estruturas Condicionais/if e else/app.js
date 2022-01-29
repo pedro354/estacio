@@ -1,7 +1,10 @@
+
 let nome = "Thaina";
 let sobrenome = "Silva";
 let idade = 23;
+
 const numCliente = 095864;
+
 let valorEmprestimo = 150000;
 let taxaJuros = 0.10;
 let numAnos = 6;
@@ -39,3 +42,14 @@ if (idade >= 18 && idade <= 25){
     taxaJuros = 0.06
 }
 console.log(taxaJuros);
+
+
+let id = 9;
+
+if (id >= 18){
+    console.log("Você pode votar");
+}else if (id >= 16 || id >= 60){
+    console.log("Seu voto é opcional")
+} else {
+    console.log("Você não pode votar");
+}
