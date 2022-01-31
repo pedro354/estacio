@@ -71,7 +71,7 @@ while(true){
     console.log(montante);
 
 }
-/* Uso do parseInt e Prompt
+//Uso do parseInt e Prompt
 let soma = 0;
 let numero;
 while(soma < 100){
@@ -79,4 +79,3 @@ while(soma < 100){
     soma = soma + numero;
     console.log(soma);
 }
-*/

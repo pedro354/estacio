@@ -77,7 +77,7 @@ quadroDefuncionarios.forEach((departamento, indiceDep) => {
         console.log(`${indiceDep + 1} - ${funcionario}`)
     })
 })
-//MAP percorre array e adiciona um novo numero
+//MAP mapeia array de origem e gera um novo array = pecorre o array de origem sejam pecorridos e sejam multiplicados
 //const numero = [1,4,9,16];
 //const novosNumeros = numeros.map((numero)=> numero * 2);
 //console.log(novosNumeros); // [2,8,18,32]
