@@ -77,7 +77,7 @@ quadroDefuncionarios.forEach((departamento, indiceDep) => {
         console.log(`${indiceDep + 1} - ${funcionario}`)
     })
 })
-
+//MAP percorre array e adiciona um novo numero
 //const numero = [1,4,9,16];
 //const novosNumeros = numeros.map((numero)=> numero * 2);
 //console.log(novosNumeros); // [2,8,18,32]
@@ -197,12 +197,13 @@ for (let fruta of frutas){
 }
 */
 //ForEach
+/*
 const frutas = ["Abacaxi", "Laranja", "Maça", "Limão", "Morango"];
 frutas.forEach((fruta, indice) => {
     console.log(frutas);
     console.log("Fruta " + indice + " : " + fruta);
 });
-
+*/
 /*
 Math.random() 
 - Retorna um número de ponto flutuante entre 0 e 1;
@@ -232,10 +233,8 @@ console.log(Math.random() * 4)); //2
 console.log(Math.random() * 4)); //0
 
 */
-
-
+/*
 //Acesso aleatorio de arrays
-
 const nomess = ["Manuel","Edval","Bruno","Jose","Caio","Pedro"]
 let indiceAleatorioo = Math.floor(Math.random() * 6);
-console.log(nomess[indiceAleatorio]);
+console.log(nomess[indiceAleatorio]);*/
