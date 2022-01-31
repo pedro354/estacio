@@ -20,10 +20,9 @@ let indiceBoneco;
 const numTentativas = 7;
 /* Valor para opacidade dos olhos */
 const opacidadeOlhos = 0.3;
-
 const categorias = {
     /*keys= chaves*/
-    frutas: ["abacaixi", "limao", "mamao", "uva", "melancia", "melao", "morango", "cereja"],
+    frutas: ["abacaxi", "limao", "mamao", "uva", "melancia", "melao", "morango", "cereja"],
     profissoes: ["engenheiro", "advogado", "psicologo", "medico", "policial", "bombeiro"],
     cores: ["azul", "vermelho", "amarelo", "preto", "cinza", "laranja", "roxo"],
     animais: ["cavalo", "vaca", "boi", "onitorrinco", "jacare", "cobra", "coruja"]
@@ -35,13 +34,38 @@ function retornaArrayCategorias(){
 
 function retornaCategoria(){
     const arrayCategorias = retornaArrayCategorias();
-    let indiceCategoria = Math.floor(Math.random() * arrayCategorias.length)
+    let indiceCategoria = Math.floor(Math.random() * arrayCategorias.length);
     return arrayCategorias[indiceCategoria];
 }
 
 function exibeCategoria(){
     categoria.innerHTML = retornaCategoria();
 }
+
+function retornaNumAleatorio(max){
+    return Math.floor(Math.random() * max);
+}
+
+function definePalavraProposta(){
+    const arrayPalavras = categorias[categoria.innerHTML];
+    let indicePalavra = retornaNumAleatorio(arrayPalavras.lenght)
+    palavraProposta = arrayPalavras[indicePalavra]
+    console.log(palavraProposta)
+    ocultaPalavra();
+}
+
+function ocultaPalavra(){
+    let palavraOcultada = " ";
+    for(let i = 0; i < palavraProposta.length; i++){
+        palavraOcultada += "-";
+    }
+    exibePalavraInterface(palavraOcultada);
+}
+
+function exibePalavraInterface(palavra){
+    palavraInterface.innerHTML = palavra;
+}
+
 /*
 Recebe o evento do teclado e passa apenas o valor da letra para a função tentativa
 */
@@ -87,6 +111,7 @@ function iniciaJogo(){
     letrasErradasArray = [];
     ocultaBoneco();
     exibeCategoria();
+    definePalavraProposta();
     letrasErradas.innerHTML = "Letras erradas: ";
     window.addEventListener("keypress", retornaLetra);
 }
