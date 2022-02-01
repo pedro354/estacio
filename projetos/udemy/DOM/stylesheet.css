@@ -1,0 +1,24 @@
+/* paletas*/
+.paletas_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.paleta {
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+}
+
+#paleta1 {
+    background-color: seagreen;
+}
+
+#paleta2 {
+    background-color: slateblue;
+}
+
+#paleta3 {
+    background-color: tomato;
+}
