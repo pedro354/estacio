@@ -30,7 +30,7 @@
     margin-bottom: 10px;
     background-color: #247ba0;
     border-radius: 10px;
-    padding: 12px;
+    padding: 10px;
 }
 
 .input_div {
@@ -53,9 +53,9 @@
 }
 
 .titulo {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size: 70px;
+    font-size: 50px;
     margin-top: 10px;
 }
 
@@ -66,12 +66,15 @@
 }
 
 .atividade {
-    width: 350px;
+    height: auto;
+    width: auto;
+    margin: 10px auto;
     background-color: rgb(216, 215, 215);
-    border-radius: 10px;
+    border-radius: 5px;
     padding-left: 10px;
-    margin-top: 10px;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -106,6 +109,7 @@ p {
     outline: none;
     margin-left: 35px;
     font-size: 20px;
+    text-transform: uppercase;
     color: #ffffff;
 }
 
@@ -114,7 +118,7 @@ p {
     border-radius: 5px;
     border: none;
     margin: 5px;
-    padding: 2px;
+    padding: 10px;
     color: white;
 }
 
@@ -133,14 +137,17 @@ p {
 
 #paleta1 {
     background-color: seagreen;
+    border-radius: 50%;
 }
 
 #paleta2 {
     background-color: slateblue;
+    border-radius: 50%;
 }
 
 #paleta3 {
     background-color: tomato;
+    border-radius: 50%;
 }
 
     

@@ -8,12 +8,11 @@ const paleta1 = document.querySelector("#paleta1");
 const paleta2 = document.querySelector("#paleta2");
 const paleta3 = document.querySelector("#paleta3");
 
-
 paleta1.addEventListener('click', () => definePaleta('seagreen'));
-paleta2.addEventListener('mousemove', () => definePaleta('slateblue'));
-paleta3.addEventListener('dblclick', () => definePaleta('tomato'));
+paleta2.addEventListener('dblclick', () => definePaleta('slateblue'));
+paleta3.addEventListener('mousemove', () => definePaleta('tomato'));
 botaoCadastra.addEventListener('click', () => cadastraAtividade());
-botaoLimpar.addEventListener('click', () => removeAtividade()); 
+botaoLimpar.addEventListener('click', () => removeAtividades()); 
 
 
 function definePaleta(cor){
@@ -25,12 +24,11 @@ function removeAtividade(atividade){
     listaAtividades.removeChild(atividade);
 }
 
-function removeAtividade(){
+function removeAtividades(){
     while(listaAtividades.firstElementChild){
         listaAtividades.removeChild(listaAtividades.firstElementChild);
-    }
 }
-
+}
 
 function criaAtividade() {
     const atividade = document.createElement("div");

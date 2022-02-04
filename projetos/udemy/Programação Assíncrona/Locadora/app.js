@@ -22,15 +22,36 @@ function exibeFilmes (){
 function adicionaFilme(filme){
     const promise = (resolve, reject) => {
         setTimeout(()=> {
+            if(filme.nome === ""){
+                reject(new Error("Nome incorreto"));
+            }else{
             filmes.push(filme);
-            resolve();
-        }, 3000);
+            resolve(filme);
+            }
+        }, 0);
+        
     }
     return new Promise(promise);
     }
 
+async function funcaoAsync(){
+    try{
+        const oContraTempo = await adicionaFilme({nome: "O Contratempo", Genêro: "Suspense"});
+        console.log(oContraTempo);
+        await adicionaFilme({nome: "A Cabana", Genêro: "Terror Psicologico"})
+        await adicionaFilme({nome: "A Ilha do Medo", Genêro: "Suspense"})
+        await adicionaFilme({nome: "After", Genêro: "Romance"})
+        await adicionaFilme({nome: "Pokemon: Mewtwo", Genêro: "Animação"})
+        await adicionaFilme({nome: "Esposa de Mentirinha", Genêro: "Comédia Romantica"})
+        exibeFilmes();
+    }catch(erro){
+        console.error(erro);
+    }
 
-adicionaFilme({nome: "O Contratempo", Genêro: "Suspense"}, exibeFilmes)
+}
+funcaoAsync();
+/*
+adicionaFilme({nome: "O Contratempo", Genêro: "Suspense"})
 .then(() => {
     return adicionaFilme({nome: "A Cabana", Genêro: "Terror Psicologico"})//adiciona elemento ao grupo array
 })
@@ -46,5 +67,7 @@ adicionaFilme({nome: "O Contratempo", Genêro: "Suspense"}, exibeFilmes)
 .then(() => {
     return adicionaFilme({nome: "Esposa de Mentirinha", Genêro: "Comédia Romantica"})//adiciona elemento ao grupo array
 })    
-.then(exibeFilmes);
-    
+.then(exibeFilmes)
+.catch((erro)=>{
+    console.error(erro);
+})*/
