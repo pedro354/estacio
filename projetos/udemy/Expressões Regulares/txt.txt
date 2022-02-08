@@ -21,3 +21,17 @@ Você deve usar construtor quando souber que o padrão da expressão regular ir�
 Notação:
 Test: Executa uma busca por uma correnspondencia entre uma expressão regular e uma string especificada.
 regex.test(stringTest);
+
+------------------
+Match: 
+Recupera o resultado da correnspondencia de uma string com uma expressão regular.
+string.match(regex);
+
+------------------
+Exec:
+Recupera o resultado da correnspondencia de uma string com uma expressão regular.
+regex.exec(string);
+
+Grupos:
+Grupos servem para agrupar partes de padrao e ajudar na manipulação dessa parte.
+

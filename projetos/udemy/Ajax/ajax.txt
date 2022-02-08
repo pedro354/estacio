@@ -1,0 +1,8 @@
+O que é AJAX?
+Conjunto de tecnologias usadas por páginas da web interativas fazer solicitações http a um servidor sem causar atualizações
+completas na página.
+
+------------------
+Objeto XMLHttpRequest:
+O AJAX utiliza o Objeto XMLHttpRequest para enviar e receber dados de um servidor
+const httpRequest = new XMLHttpRequest();
