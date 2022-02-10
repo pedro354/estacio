@@ -6,3 +6,11 @@ completas na página.
 Objeto XMLHttpRequest:
 O AJAX utiliza o Objeto XMLHttpRequest para enviar e receber dados de um servidor
 const httpRequest = new XMLHttpRequest();
+
+OPEN:
+Cria uma conexão entrea a aplicação e o servidor 
+httpRequest.open("Metodo", "url", flag);
+
+Send:
+Ativa a conexão e reliza a devida requisação
+httpRequest.send({DADOS});
