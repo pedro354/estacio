@@ -39,16 +39,19 @@ function exibePosts(){
 const listaPosts = document.querySelector("#listaPosts");
 let posts;
 
-fetch("https://jsonplaceholder.typicode.com/posts/", {
-	method: "POST",
+fetch("https://jsonplaceholder.typicode.com/posts/2", {
+	method: "PUT",
+	
 	body: JSON.stringify({
-		title: "new post",
+		title: 'new post',
 		body: "corpo do post",
-		userId: 5,
+		userId: 5
 	}),
 	headers: {
-		'Content': 'application/json; charset-UTF-8',
+		'Content-type': 'application/json',
+		'Accept': 'application/json',
 	},
+
 })
 
 	.then((response) => response.json())
@@ -60,7 +63,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/", {
 		console.log(posts)
 
 	})
-	
+
 
 	/*
 	const listaPosts = document.querySelector("#listaPosts");
@@ -84,6 +87,5 @@ fetch("https://jsonplaceholder.typicode.com/posts/2", {
 	})
 	.then(() => {
 		//exibePosts();
-		console.log(posts)
-
-	})*/
+		console.log(posts);
+*/
