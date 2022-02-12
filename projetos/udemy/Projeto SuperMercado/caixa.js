@@ -1,4 +1,9 @@
+import Produto from './produtos/produto.js';
 import Carrinho from './carrinho.js';
+import Alimentacao from './produtos/alimentacao.js';
+import Limpeza from './produtos/limpeza.js';
+import Carro from './produtos/carro.js';
+
 
 const nomeProduto = document.querySelector("#nomeProd");
 const valorProduto = document.querySelector("#valorProd");
@@ -13,12 +18,49 @@ const valorFinal = document.querySelector("#valorFinal");
 const listaProd = document.querySelector(".lista_prod");
 const carrinho = new Carrinho();
 
+
 botaoAdd.addEventListener('click', () => adicionaProduto());
 botaoRemove.addEventListener('click', () => removeProduto());
 botaoDesconto.addEventListener('click', () => aplicaDesconto());
 tipoProduto.addEventListener('input',() => flagDataValidade());
 
-console.log(carrinho);
+function criaProduto(){
+    let produto;
+    if(tipoProduto.value === "alimentacao"){
+        produto = new Alimentacao (nomeProduto.value, Number(valorProduto.value), codigoProduto.value, tipoProduto.value, dataProduto.value);//value pega o produto
+    }else if (tipoProduto.value === "carro"){
+        produto = new Carro (nomeProduto.value, Number(valorProduto.value), codigoProduto.value, tipoProduto.value,);
+    }else if (tipoProduto.value === "limpeza"){
+        produto = new Limpeza (nomeProduto.value, Number(valorProduto.value), codigoProduto.value, tipoProduto.value,);
+    }else if (tipoProduto.value === "outro"){
+        produto = new Produto (nomeProduto.value, Number(valorProduto.value), codigoProduto.value, tipoProduto.value,);
+    }
+    return produto;
+}
+
+function adicionaProduto(){
+    const produto = criaProduto();
+    carrinho.adicionarProduto(produto);
+    exibeProdutos();
+    atualizaValorTotal();
+    console.log(produto);
+}
+
+
+function removeProduto(){
+    carrinho.removerProduto();
+    exibeProdutos();
+    atualizaValorTotal();
+}
+
+
+function atualizaValorTotal(){
+    valorTotal.textContent = `Valor total: R$ ${carrinho.valor}`;
+}
+
+function aplicaDesconto(){
+    valorFinal.textContent = `Valor Final: R$ ${carrinho.calcularValorFinal()}`;
+}
 
 function exibeProdutos(){
     let saida = "";
@@ -27,6 +69,8 @@ function exibeProdutos(){
     });
     listaProd.innerHTML = saida;
 }
+
+
 
 function flagDataValidade(){
     if(document.querySelector("#tipoProd").value === "alimentacao"){

@@ -5,21 +5,20 @@ export default class Produto {
     #tipo;
     
     constructor(nome, valor, codigo, tipo){
-        this.nome = nome;
-        this.valor = valor;
-        this.codigo = codigo;
-        this.tipo = tipo;
+        this.#nome = nome;
+        this.#valor = valor;
+        this.#codigo = codigo;
+        this.#tipo = tipo;
     }
 
-    aplicarDesconto(){
-        return this.#valor = this.#valor * 0.1;
+    aplicaDesconto(){
+        return this.#valor - this.#valor * 0.10;
     }
 
     get nome(){
         return this.#nome;
     }
     get valor(){
-
         return this.#valor;
     }
     get codigo(){

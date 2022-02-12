@@ -6,12 +6,12 @@
         this.#listaDeProdutos = [];
         this.#valorTotal = 0;
     }
-    adicionaProduto(produto){
+    adicionarProduto(produto){
         this.#listaDeProdutos.push(produto);
         this.#valorTotal += produto.valor;
     }
 
-    removeProduto(){
+    removerProduto(){
         const produtoRemovido = this.#listaDeProdutos.pop();//Remove o ultimo elemento
         this.#valorTotal -= produtoRemovido.valor;
     }
@@ -27,7 +27,7 @@
 
 
     get valor(){
-        return this.#valorTotal
+        return this.#valorTotal;
     }
 
     get listaDeProdutos(){
